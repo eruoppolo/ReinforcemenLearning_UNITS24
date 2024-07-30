@@ -1,0 +1,28 @@
+------------------------ Train PMF ---------------------------
+Loaded user
+Loaded prod
+Loaded data
+Model moved to CUDA
+------------------------------------------- Training Model------------------------------------------------
+parameters are: train ratio:0.800000,batch_size:100000, epoches:50, weight_decay:0.100000
+PMF(
+  (user_embeddings): Embedding(103839, 100)
+  (item_embeddings): Embedding(9976, 100)
+  (ub): Embedding(103839, 1)
+  (ib): Embedding(9976, 1)
+)
+/orfeo/cephfs/home/dssc/eruoppolo/reinforcement/rl/movies/scripts/../embedding.py:173: DeprecationWarning: __array_wrap__ must accept context and return_scalar arguments (positionally) in the future. (Deprecated NumPy 2.0)
+  train_rmse = np.sqrt(train_epoch_loss.cpu())
+Training epoch: 1, training rmse: 0.441915, vali rmse:0.429427
+Training epoch: 2, training rmse: 0.426535, vali rmse:0.426461
+Training epoch: 3, training rmse: 0.421268, vali rmse:0.419745
+Training epoch: 4, training rmse: 0.410480, vali rmse:0.410267
+Training epoch: 5, training rmse: 0.398000, vali rmse:0.402128
+Training epoch: 6, training rmse: 0.385662, vali rmse:0.395891
+Training epoch: 7, training rmse: 0.373544, vali rmse:0.391547
+Training epoch: 8, training rmse: 0.361959, vali rmse:0.389102
+Training epoch: 9, training rmse: 0.351522, vali rmse:0.388495
+Training epoch: 10, training rmse: 0.343229, vali rmse:0.390458
+Training epoch: 11, training rmse: 0.341947, vali rmse:0.396768
+------------------------------------------- Testing Model------------------------------------------------
+Test rmse: 0.396889

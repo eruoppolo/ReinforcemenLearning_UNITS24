@@ -1,0 +1,72 @@
+/orfeo/cephfs/home/dssc/eruoppolo/reinforcement/rl/movies/tth_learn.py:910: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  ignored_items.append(torch.tensor(rec_item_idx).to(self.device))
+Initializing DRR Framework ----------------------------------------------------------------------------
+Using CPU
+Seeds initialized
+Data imported, shuffled, and split into Train/Test, ratio= 0.8
+Train data shape:  torch.Size([17956792, 4])
+Test data shape:  torch.Size([4489199, 4])
+Initialized PMF, imported weights, created reward_function
+Extracted user and item embeddings from PMF
+User embeddings shape:  torch.Size([103839, 100])
+Item embeddings shape:  torch.Size([9976, 100])
+--------------------------------------- INITIAL SETTINGS ----------------------------------------------
+
+--- Configuration Settings ---
+output_path: ../results/290724-000000/
+plot_dir: ../results/290724-000000/rewards.pdf
+train_actor_loss_data_dir: ../results/290724-000000/train_actor_loss_data.npy
+train_critic_loss_data_dir: ../results/290724-000000/train_critic_loss_data.npy
+train_mean_reward_data_dir: ../results/290724-000000/train_mean_reward_data.npy
+train_actor_loss_plot_dir: ../results/290724-000000/train_actor_loss.png
+train_critic_loss_plot_dir: ../results/290724-000000/train_critic_loss.png
+train_mean_reward_plot_dir: ../results/290724-000000/train_mean_reward.png
+trained_models_dir: ../../../movies/
+actor_model_trained: ../../../movies/actor_net.weights
+critic_model_trained: ../../../movies/critic_net.weights
+state_rep_model_trained: ../../../movies/state_rep_net.weights
+actor_model_dir: ../results/290724-000000/actor_net.weights
+critic_model_dir: ../results/290724-000000/critic_net.weights
+state_rep_model_dir: ../results/290724-000000/state_rep_net.weights
+csv_dir: ../results/290724-000000/log.csv
+path_to_trained_pmf: ../../../movies/10ratio_0.800000_bs_100000_e_35_wd_0.100000_lr_0.000500_trained_pmf.pt
+batch_size: 64
+gamma: 0.9
+replay_buffer_size: 200000
+history_buffer_size: 5
+learning_start: 5000
+learning_freq: 1
+lr_state_rep: 0.001
+lr_actor: 0.0005
+lr_critic: 0.001
+eps_start: 1
+eps: 0.1
+eps_steps: 5000
+eps_eval: 0.1
+tau: 0.001
+beta: 0.4
+prob_alpha: 0.5
+max_timesteps_train: 200000
+max_epochs_offline: 500
+max_timesteps_online: 50
+embedding_feature_size: 100
+episode_length: 25
+train_ratio: 0.8
+weight_decay: 0.001
+clip_val: 1.0
+log_freq: 25
+saving_freq: 1000
+zero_reward: False
+no_cuda: True
+print_config: <classmethod(<function config.print_config at 0x7fad537dc790>)>
+-----------------------------
+
+Initializing DRRTrainer -------------------------------------------------------------------------------
+Current PyTorch Device:  cpu
+Data dimensions extracted
+Models initialized
+Model weights initialized, copied to target
+Optimizers initialized
+----------- EVALUATING reward@10---------------
+Process Finished
+Data saved

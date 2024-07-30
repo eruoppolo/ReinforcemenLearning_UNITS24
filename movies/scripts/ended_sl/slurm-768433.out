@@ -1,0 +1,310 @@
+/orfeo/cephfs/home/dssc/eruoppolo/reinforcement/rl/movies/tth_learn.py:910: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  ignored_items.append(torch.tensor(rec_item_idx).to(self.device))
+Initializing DRR Framework ----------------------------------------------------------------------------
+Using CPU
+Seeds initialized
+Data imported, shuffled, and split into Train/Test, ratio= 0.8
+Train data shape:  torch.Size([17956792, 4])
+Test data shape:  torch.Size([4489199, 4])
+Initialized PMF, imported weights, created reward_function
+Extracted user and item embeddings from PMF
+User embeddings shape:  torch.Size([103839, 100])
+Item embeddings shape:  torch.Size([9976, 100])
+--------------------------------------- INITIAL SETTINGS ----------------------------------------------
+
+--- Configuration Settings ---
+output_path: ../results/290724-000000/
+plot_dir: ../results/290724-000000/rewards.pdf
+train_actor_loss_data_dir: ../results/290724-000000/train_actor_loss_data.npy
+train_critic_loss_data_dir: ../results/290724-000000/train_critic_loss_data.npy
+train_mean_reward_data_dir: ../results/290724-000000/train_mean_reward_data.npy
+train_actor_loss_plot_dir: ../results/290724-000000/train_actor_loss.png
+train_critic_loss_plot_dir: ../results/290724-000000/train_critic_loss.png
+train_mean_reward_plot_dir: ../results/290724-000000/train_mean_reward.png
+trained_models_dir: ../../../movies/
+actor_model_trained: ../../../movies/actor_net.weights
+critic_model_trained: ../../../movies/critic_net.weights
+state_rep_model_trained: ../../../movies/state_rep_net.weights
+actor_model_dir: ../results/290724-000000/actor_net.weights
+critic_model_dir: ../results/290724-000000/critic_net.weights
+state_rep_model_dir: ../results/290724-000000/state_rep_net.weights
+csv_dir: ../results/290724-000000/log.csv
+path_to_trained_pmf: ../../../movies/10ratio_0.800000_bs_100000_e_35_wd_0.100000_lr_0.000500_trained_pmf.pt
+batch_size: 64
+gamma: 0.9
+replay_buffer_size: 200000
+history_buffer_size: 5
+learning_start: 5000
+learning_freq: 1
+lr_state_rep: 0.001
+lr_actor: 0.0005
+lr_critic: 0.001
+eps_start: 1
+eps: 0.1
+eps_steps: 5000
+eps_eval: 0.1
+tau: 0.001
+beta: 0.4
+prob_alpha: 0.5
+max_timesteps_train: 200000
+max_epochs_offline: 500
+max_timesteps_online: 6000
+embedding_feature_size: 100
+episode_length: 25
+train_ratio: 0.8
+weight_decay: 0.001
+clip_val: 1.0
+log_freq: 25
+saving_freq: 1000
+zero_reward: False
+no_cuda: True
+print_config: <classmethod(<function config.print_config at 0x7f49385e0790>)>
+-----------------------------
+
+Initializing DRRTrainer -------------------------------------------------------------------------------
+Current PyTorch Device:  cpu
+Data dimensions extracted
+Models initialized
+Model weights initialized, copied to target
+Optimizers initialized
+----------- EVALUATING reward@10---------------
+Timestep 75 | Episode 7 | Avg Total Reward 0.5449 | Critic Params Norm 9.5251 | Actor Loss -5.8421 | Critic Loss 0.0584 | 
+Timestep 100 | Episode 10 | Avg Total Reward 0.5619 | Critic Params Norm 10.4187 | Actor Loss -6.2522 | Critic Loss 0.0766 | 
+Timestep 125 | Episode 12 | Avg Total Reward 0.5863 | Critic Params Norm 17.0189 | Actor Loss -5.8815 | Critic Loss 0.1187 | 
+Timestep 150 | Episode 15 | Avg Total Reward 0.6093 | Critic Params Norm 3.5004 | Actor Loss -6.1931 | Critic Loss 0.0381 | 
+Timestep 175 | Episode 17 | Avg Total Reward 0.5989 | Critic Params Norm 20.9703 | Actor Loss -6.2474 | Critic Loss 0.0862 | 
+Timestep 200 | Episode 20 | Avg Total Reward 0.5950 | Critic Params Norm 6.9245 | Actor Loss -5.8210 | Critic Loss 0.1129 | 
+Timestep 225 | Episode 22 | Avg Total Reward 0.5994 | Critic Params Norm 7.0867 | Actor Loss -5.5353 | Critic Loss 0.0692 | 
+Timestep 250 | Episode 25 | Avg Total Reward 0.6082 | Critic Params Norm 7.9567 | Actor Loss -5.9470 | Critic Loss 0.1297 | 
+Timestep 275 | Episode 27 | Avg Total Reward 0.6052 | Critic Params Norm 14.7218 | Actor Loss -5.6801 | Critic Loss 0.1176 | 
+Timestep 300 | Episode 30 | Avg Total Reward 0.5964 | Critic Params Norm 11.4528 | Actor Loss -5.9476 | Critic Loss 0.0827 | 
+Timestep 325 | Episode 32 | Avg Total Reward 0.6008 | Critic Params Norm 6.9924 | Actor Loss -5.5804 | Critic Loss 0.0549 | 
+Timestep 350 | Episode 35 | Avg Total Reward 0.5893 | Critic Params Norm 5.7256 | Actor Loss -6.0048 | Critic Loss 0.0593 | 
+Timestep 375 | Episode 37 | Avg Total Reward 0.5912 | Critic Params Norm 4.8619 | Actor Loss -5.5824 | Critic Loss 0.0479 | 
+Timestep 400 | Episode 40 | Avg Total Reward 0.5988 | Critic Params Norm 10.0178 | Actor Loss -6.0664 | Critic Loss 0.0893 | 
+Timestep 425 | Episode 42 | Avg Total Reward 0.5974 | Critic Params Norm 6.9749 | Actor Loss -5.6439 | Critic Loss 0.0606 | 
+Timestep 450 | Episode 45 | Avg Total Reward 0.5842 | Critic Params Norm 6.2914 | Actor Loss -6.1910 | Critic Loss 0.0832 | 
+Timestep 475 | Episode 47 | Avg Total Reward 0.6018 | Critic Params Norm 3.8851 | Actor Loss -5.7542 | Critic Loss 0.0624 | 
+Timestep 500 | Episode 50 | Avg Total Reward 0.6033 | Critic Params Norm 3.8619 | Actor Loss -5.6938 | Critic Loss 0.0788 | 
+Timestep 525 | Episode 52 | Avg Total Reward 0.5956 | Critic Params Norm 6.6681 | Actor Loss -5.3596 | Critic Loss 0.0566 | 
+Timestep 550 | Episode 55 | Avg Total Reward 0.5972 | Critic Params Norm 3.2872 | Actor Loss -5.7024 | Critic Loss 0.0546 | 
+Timestep 575 | Episode 57 | Avg Total Reward 0.6033 | Critic Params Norm 11.3909 | Actor Loss -5.4905 | Critic Loss 0.0886 | 
+Timestep 600 | Episode 60 | Avg Total Reward 0.5964 | Critic Params Norm 7.1623 | Actor Loss -6.0176 | Critic Loss 0.0909 | 
+Timestep 625 | Episode 62 | Avg Total Reward 0.5901 | Critic Params Norm 4.3922 | Actor Loss -5.4550 | Critic Loss 0.0864 | 
+Timestep 650 | Episode 65 | Avg Total Reward 0.5840 | Critic Params Norm 5.4602 | Actor Loss -5.8570 | Critic Loss 0.1087 | 
+Timestep 675 | Episode 67 | Avg Total Reward 0.5774 | Critic Params Norm 4.2453 | Actor Loss -5.7793 | Critic Loss 0.0505 | 
+Timestep 700 | Episode 70 | Avg Total Reward 0.5763 | Critic Params Norm 8.8527 | Actor Loss -5.8499 | Critic Loss 0.1493 | 
+Timestep 725 | Episode 72 | Avg Total Reward 0.5783 | Critic Params Norm 7.5805 | Actor Loss -5.7478 | Critic Loss 0.0919 | 
+Timestep 750 | Episode 75 | Avg Total Reward 0.5734 | Critic Params Norm 6.4297 | Actor Loss -5.8732 | Critic Loss 0.0860 | 
+Timestep 775 | Episode 77 | Avg Total Reward 0.5759 | Critic Params Norm 11.8599 | Actor Loss -5.7689 | Critic Loss 0.0788 | 
+Timestep 800 | Episode 80 | Avg Total Reward 0.5719 | Critic Params Norm 2.4270 | Actor Loss -5.7177 | Critic Loss 0.0513 | 
+Timestep 825 | Episode 82 | Avg Total Reward 0.5677 | Critic Params Norm 5.9512 | Actor Loss -5.8366 | Critic Loss 0.0460 | 
+Timestep 850 | Episode 85 | Avg Total Reward 0.5627 | Critic Params Norm 3.9717 | Actor Loss -5.9371 | Critic Loss 0.0735 | 
+Timestep 875 | Episode 87 | Avg Total Reward 0.5678 | Critic Params Norm 3.8806 | Actor Loss -5.8067 | Critic Loss 0.0503 | 
+Timestep 900 | Episode 90 | Avg Total Reward 0.5645 | Critic Params Norm 4.1109 | Actor Loss -5.7628 | Critic Loss 0.0934 | 
+Timestep 925 | Episode 92 | Avg Total Reward 0.5615 | Critic Params Norm 14.7797 | Actor Loss -5.7953 | Critic Loss 0.1440 | 
+Timestep 950 | Episode 95 | Avg Total Reward 0.5622 | Critic Params Norm 4.5940 | Actor Loss -5.7746 | Critic Loss 0.0947 | 
+Timestep 975 | Episode 97 | Avg Total Reward 0.5620 | Critic Params Norm 3.4949 | Actor Loss -5.5965 | Critic Loss 0.0457 | 
+Timestep 1000 | Episode 100 | Avg Total Reward 0.5646 | Critic Params Norm 6.7179 | Actor Loss -5.9318 | Critic Loss 0.0956 | 
+Timestep 1025 | Episode 102 | Avg Total Reward 0.5673 | Critic Params Norm 6.3402 | Actor Loss -5.7678 | Critic Loss 0.0545 | 
+Timestep 1050 | Episode 105 | Avg Total Reward 0.5629 | Critic Params Norm 4.3491 | Actor Loss -5.6839 | Critic Loss 0.0598 | 
+Timestep 1075 | Episode 107 | Avg Total Reward 0.5607 | Critic Params Norm 7.1070 | Actor Loss -5.7116 | Critic Loss 0.0900 | 
+Timestep 1100 | Episode 110 | Avg Total Reward 0.5624 | Critic Params Norm 5.4393 | Actor Loss -5.9603 | Critic Loss 0.0764 | 
+Timestep 1125 | Episode 112 | Avg Total Reward 0.5611 | Critic Params Norm 10.5932 | Actor Loss -5.5985 | Critic Loss 0.0702 | 
+Timestep 1150 | Episode 115 | Avg Total Reward 0.5583 | Critic Params Norm 9.7017 | Actor Loss -5.8082 | Critic Loss 0.1522 | 
+Timestep 1175 | Episode 117 | Avg Total Reward 0.5613 | Critic Params Norm 2.3203 | Actor Loss -5.8731 | Critic Loss 0.0439 | 
+Timestep 1200 | Episode 120 | Avg Total Reward 0.5605 | Critic Params Norm 3.7502 | Actor Loss -5.8848 | Critic Loss 0.0757 | 
+Timestep 1225 | Episode 122 | Avg Total Reward 0.5619 | Critic Params Norm 3.3170 | Actor Loss -5.9153 | Critic Loss 0.0595 | 
+Timestep 1250 | Episode 125 | Avg Total Reward 0.5591 | Critic Params Norm 3.8737 | Actor Loss -5.8302 | Critic Loss 0.0428 | 
+Timestep 1275 | Episode 127 | Avg Total Reward 0.5486 | Critic Params Norm 6.6323 | Actor Loss -5.7373 | Critic Loss 0.1009 | 
+Timestep 1300 | Episode 130 | Avg Total Reward 0.5474 | Critic Params Norm 6.6599 | Actor Loss -5.6728 | Critic Loss 0.0658 | 
+Timestep 1325 | Episode 132 | Avg Total Reward 0.5490 | Critic Params Norm 8.2792 | Actor Loss -5.6953 | Critic Loss 0.0867 | 
+Timestep 1350 | Episode 135 | Avg Total Reward 0.5510 | Critic Params Norm 7.1180 | Actor Loss -5.6099 | Critic Loss 0.0939 | 
+Timestep 1375 | Episode 137 | Avg Total Reward 0.5529 | Critic Params Norm 7.2051 | Actor Loss -5.8613 | Critic Loss 0.0769 | 
+Timestep 1400 | Episode 140 | Avg Total Reward 0.5509 | Critic Params Norm 3.5234 | Actor Loss -5.7711 | Critic Loss 0.0573 | 
+Timestep 1425 | Episode 142 | Avg Total Reward 0.5506 | Critic Params Norm 5.7707 | Actor Loss -5.4303 | Critic Loss 0.1063 | 
+Timestep 1450 | Episode 145 | Avg Total Reward 0.5514 | Critic Params Norm 6.2014 | Actor Loss -5.6030 | Critic Loss 0.0863 | 
+Timestep 1475 | Episode 147 | Avg Total Reward 0.5516 | Critic Params Norm 10.1505 | Actor Loss -5.7631 | Critic Loss 0.1514 | 
+Timestep 1500 | Episode 150 | Avg Total Reward 0.5511 | Critic Params Norm 7.0408 | Actor Loss -5.9332 | Critic Loss 0.1501 | 
+Timestep 1525 | Episode 152 | Avg Total Reward 0.5513 | Critic Params Norm 7.1338 | Actor Loss -6.0140 | Critic Loss 0.0557 | 
+Timestep 1550 | Episode 155 | Avg Total Reward 0.5535 | Critic Params Norm 3.2878 | Actor Loss -5.9229 | Critic Loss 0.0556 | 
+Timestep 1575 | Episode 157 | Avg Total Reward 0.5504 | Critic Params Norm 10.4620 | Actor Loss -5.8718 | Critic Loss 0.0952 | 
+Timestep 1600 | Episode 160 | Avg Total Reward 0.5494 | Critic Params Norm 3.7788 | Actor Loss -5.6175 | Critic Loss 0.0959 | 
+Timestep 1625 | Episode 162 | Avg Total Reward 0.5506 | Critic Params Norm 6.3739 | Actor Loss -5.7759 | Critic Loss 0.0781 | 
+Timestep 1650 | Episode 165 | Avg Total Reward 0.5512 | Critic Params Norm 3.0737 | Actor Loss -5.6715 | Critic Loss 0.0686 | 
+Timestep 1675 | Episode 167 | Avg Total Reward 0.5502 | Critic Params Norm 6.8749 | Actor Loss -5.7650 | Critic Loss 0.0662 | 
+Timestep 1700 | Episode 170 | Avg Total Reward 0.5488 | Critic Params Norm 4.8778 | Actor Loss -5.8251 | Critic Loss 0.0924 | 
+Timestep 1725 | Episode 172 | Avg Total Reward 0.5524 | Critic Params Norm 6.2768 | Actor Loss -5.7744 | Critic Loss 0.1020 | 
+Timestep 1750 | Episode 175 | Avg Total Reward 0.5511 | Critic Params Norm 7.1084 | Actor Loss -5.7026 | Critic Loss 0.1234 | 
+Timestep 1775 | Episode 177 | Avg Total Reward 0.5503 | Critic Params Norm 5.0368 | Actor Loss -5.5597 | Critic Loss 0.0799 | 
+Timestep 1800 | Episode 180 | Avg Total Reward 0.5485 | Critic Params Norm 8.8458 | Actor Loss -5.5507 | Critic Loss 0.1282 | 
+Timestep 1825 | Episode 182 | Avg Total Reward 0.5489 | Critic Params Norm 5.7658 | Actor Loss -5.5514 | Critic Loss 0.0491 | 
+Timestep 1850 | Episode 185 | Avg Total Reward 0.5490 | Critic Params Norm 3.2290 | Actor Loss -5.8010 | Critic Loss 0.0528 | 
+Timestep 1875 | Episode 187 | Avg Total Reward 0.5500 | Critic Params Norm 4.5883 | Actor Loss -5.7572 | Critic Loss 0.0439 | 
+Timestep 1900 | Episode 190 | Avg Total Reward 0.5501 | Critic Params Norm 5.8672 | Actor Loss -5.8189 | Critic Loss 0.0592 | 
+Timestep 1925 | Episode 192 | Avg Total Reward 0.5501 | Critic Params Norm 3.2767 | Actor Loss -5.9076 | Critic Loss 0.0502 | 
+Timestep 1950 | Episode 195 | Avg Total Reward 0.5516 | Critic Params Norm 5.1558 | Actor Loss -5.7058 | Critic Loss 0.0759 | 
+Timestep 1975 | Episode 197 | Avg Total Reward 0.5540 | Critic Params Norm 7.7634 | Actor Loss -5.7733 | Critic Loss 0.1120 | 
+Timestep 2000 | Episode 200 | Avg Total Reward 0.5562 | Critic Params Norm 8.0695 | Actor Loss -5.7089 | Critic Loss 0.0958 | 
+Timestep 2025 | Episode 202 | Avg Total Reward 0.5572 | Critic Params Norm 2.3050 | Actor Loss -5.8007 | Critic Loss 0.0460 | 
+Timestep 2050 | Episode 205 | Avg Total Reward 0.5577 | Critic Params Norm 7.1107 | Actor Loss -5.6672 | Critic Loss 0.1016 | 
+Timestep 2075 | Episode 207 | Avg Total Reward 0.5580 | Critic Params Norm 5.7346 | Actor Loss -5.9589 | Critic Loss 0.0664 | 
+Timestep 2100 | Episode 210 | Avg Total Reward 0.5559 | Critic Params Norm 5.4345 | Actor Loss -5.6235 | Critic Loss 0.0910 | 
+Timestep 2125 | Episode 212 | Avg Total Reward 0.5563 | Critic Params Norm 4.3674 | Actor Loss -5.5273 | Critic Loss 0.0627 | 
+Timestep 2150 | Episode 215 | Avg Total Reward 0.5534 | Critic Params Norm 8.4793 | Actor Loss -5.6766 | Critic Loss 0.1198 | 
+Timestep 2175 | Episode 217 | Avg Total Reward 0.5521 | Critic Params Norm 5.7687 | Actor Loss -5.9423 | Critic Loss 0.0546 | 
+Timestep 2200 | Episode 220 | Avg Total Reward 0.5527 | Critic Params Norm 4.0914 | Actor Loss -5.7069 | Critic Loss 0.0854 | 
+Timestep 2225 | Episode 222 | Avg Total Reward 0.5530 | Critic Params Norm 5.2252 | Actor Loss -5.7858 | Critic Loss 0.0839 | 
+Timestep 2250 | Episode 225 | Avg Total Reward 0.5518 | Critic Params Norm 7.0422 | Actor Loss -5.7552 | Critic Loss 0.1104 | 
+Timestep 2275 | Episode 227 | Avg Total Reward 0.5513 | Critic Params Norm 2.4983 | Actor Loss -5.7829 | Critic Loss 0.0387 | 
+Timestep 2300 | Episode 230 | Avg Total Reward 0.5509 | Critic Params Norm 4.5407 | Actor Loss -5.5826 | Critic Loss 0.0778 | 
+Timestep 2325 | Episode 232 | Avg Total Reward 0.5519 | Critic Params Norm 10.9555 | Actor Loss -5.4060 | Critic Loss 0.0905 | 
+Timestep 2350 | Episode 235 | Avg Total Reward 0.5510 | Critic Params Norm 3.3705 | Actor Loss -5.7419 | Critic Loss 0.0674 | 
+Timestep 2375 | Episode 237 | Avg Total Reward 0.5521 | Critic Params Norm 3.0170 | Actor Loss -5.9383 | Critic Loss 0.0541 | 
+Timestep 2400 | Episode 240 | Avg Total Reward 0.5515 | Critic Params Norm 11.6715 | Actor Loss -5.5986 | Critic Loss 0.1246 | 
+Timestep 2425 | Episode 242 | Avg Total Reward 0.5505 | Critic Params Norm 5.2214 | Actor Loss -5.6723 | Critic Loss 0.0610 | 
+Timestep 2450 | Episode 245 | Avg Total Reward 0.5495 | Critic Params Norm 4.0573 | Actor Loss -5.8812 | Critic Loss 0.0629 | 
+Timestep 2475 | Episode 247 | Avg Total Reward 0.5514 | Critic Params Norm 5.4963 | Actor Loss -5.6464 | Critic Loss 0.0602 | 
+Timestep 2500 | Episode 250 | Avg Total Reward 0.5522 | Critic Params Norm 4.0578 | Actor Loss -5.8427 | Critic Loss 0.0809 | 
+Timestep 2525 | Episode 252 | Avg Total Reward 0.5526 | Critic Params Norm 2.5658 | Actor Loss -5.6616 | Critic Loss 0.0418 | 
+Timestep 2550 | Episode 255 | Avg Total Reward 0.5527 | Critic Params Norm 15.4555 | Actor Loss -5.3117 | Critic Loss 0.1724 | 
+Timestep 2575 | Episode 257 | Avg Total Reward 0.5535 | Critic Params Norm 6.1386 | Actor Loss -5.8702 | Critic Loss 0.0573 | 
+Timestep 2600 | Episode 260 | Avg Total Reward 0.5514 | Critic Params Norm 7.4844 | Actor Loss -5.7757 | Critic Loss 0.1261 | 
+Timestep 2625 | Episode 262 | Avg Total Reward 0.5518 | Critic Params Norm 5.0031 | Actor Loss -5.6332 | Critic Loss 0.0628 | 
+Timestep 2650 | Episode 265 | Avg Total Reward 0.5523 | Critic Params Norm 9.9895 | Actor Loss -5.7692 | Critic Loss 0.1891 | 
+Timestep 2675 | Episode 267 | Avg Total Reward 0.5528 | Critic Params Norm 4.6432 | Actor Loss -5.6331 | Critic Loss 0.0822 | 
+Timestep 2700 | Episode 270 | Avg Total Reward 0.5530 | Critic Params Norm 3.0027 | Actor Loss -5.6636 | Critic Loss 0.0510 | 
+Timestep 2725 | Episode 272 | Avg Total Reward 0.5531 | Critic Params Norm 3.1956 | Actor Loss -5.7492 | Critic Loss 0.0776 | 
+Timestep 2750 | Episode 275 | Avg Total Reward 0.5535 | Critic Params Norm 3.5765 | Actor Loss -5.6012 | Critic Loss 0.0785 | 
+Timestep 2775 | Episode 277 | Avg Total Reward 0.5541 | Critic Params Norm 9.0357 | Actor Loss -5.7752 | Critic Loss 0.1157 | 
+Timestep 2800 | Episode 280 | Avg Total Reward 0.5555 | Critic Params Norm 3.8680 | Actor Loss -5.5862 | Critic Loss 0.0849 | 
+Timestep 2825 | Episode 282 | Avg Total Reward 0.5545 | Critic Params Norm 11.1750 | Actor Loss -5.6376 | Critic Loss 0.1228 | 
+Timestep 2850 | Episode 285 | Avg Total Reward 0.5553 | Critic Params Norm 3.4432 | Actor Loss -5.7267 | Critic Loss 0.0603 | 
+Timestep 2875 | Episode 287 | Avg Total Reward 0.5544 | Critic Params Norm 3.6886 | Actor Loss -5.5424 | Critic Loss 0.0517 | 
+Timestep 2900 | Episode 290 | Avg Total Reward 0.5529 | Critic Params Norm 10.2964 | Actor Loss -5.5157 | Critic Loss 0.0943 | 
+Timestep 2925 | Episode 292 | Avg Total Reward 0.5532 | Critic Params Norm 9.8185 | Actor Loss -5.4393 | Critic Loss 0.1052 | 
+Timestep 2950 | Episode 295 | Avg Total Reward 0.5543 | Critic Params Norm 5.9580 | Actor Loss -5.8035 | Critic Loss 0.1182 | 
+Timestep 2975 | Episode 297 | Avg Total Reward 0.5536 | Critic Params Norm 7.4680 | Actor Loss -5.8191 | Critic Loss 0.1176 | 
+Timestep 3000 | Episode 300 | Avg Total Reward 0.5527 | Critic Params Norm 8.0394 | Actor Loss -5.6490 | Critic Loss 0.1414 | 
+Timestep 3025 | Episode 302 | Avg Total Reward 0.5532 | Critic Params Norm 11.1716 | Actor Loss -5.6129 | Critic Loss 0.1280 | 
+Timestep 3050 | Episode 305 | Avg Total Reward 0.5520 | Critic Params Norm 7.0147 | Actor Loss -5.5965 | Critic Loss 0.1025 | 
+Timestep 3075 | Episode 307 | Avg Total Reward 0.5526 | Critic Params Norm 7.4822 | Actor Loss -5.7458 | Critic Loss 0.1662 | 
+Timestep 3100 | Episode 310 | Avg Total Reward 0.5527 | Critic Params Norm 4.2818 | Actor Loss -5.6518 | Critic Loss 0.0850 | 
+Timestep 3125 | Episode 312 | Avg Total Reward 0.5515 | Critic Params Norm 7.2618 | Actor Loss -5.6832 | Critic Loss 0.0766 | 
+Timestep 3150 | Episode 315 | Avg Total Reward 0.5502 | Critic Params Norm 3.7030 | Actor Loss -5.8568 | Critic Loss 0.0548 | 
+Timestep 3175 | Episode 317 | Avg Total Reward 0.5501 | Critic Params Norm 7.6459 | Actor Loss -5.5298 | Critic Loss 0.0650 | 
+Timestep 3200 | Episode 320 | Avg Total Reward 0.5496 | Critic Params Norm 7.2878 | Actor Loss -5.5491 | Critic Loss 0.1298 | 
+Timestep 3225 | Episode 322 | Avg Total Reward 0.5492 | Critic Params Norm 4.4354 | Actor Loss -5.5014 | Critic Loss 0.0765 | 
+Timestep 3250 | Episode 325 | Avg Total Reward 0.5486 | Critic Params Norm 8.8651 | Actor Loss -5.7566 | Critic Loss 0.1499 | 
+Timestep 3275 | Episode 327 | Avg Total Reward 0.5490 | Critic Params Norm 3.5907 | Actor Loss -5.5696 | Critic Loss 0.0492 | 
+Timestep 3300 | Episode 330 | Avg Total Reward 0.5476 | Critic Params Norm 4.8766 | Actor Loss -5.8578 | Critic Loss 0.0821 | 
+Timestep 3325 | Episode 332 | Avg Total Reward 0.5482 | Critic Params Norm 4.1815 | Actor Loss -5.5467 | Critic Loss 0.0813 | 
+Timestep 3350 | Episode 335 | Avg Total Reward 0.5492 | Critic Params Norm 5.7702 | Actor Loss -5.6785 | Critic Loss 0.1318 | 
+Timestep 3375 | Episode 337 | Avg Total Reward 0.5490 | Critic Params Norm 5.1644 | Actor Loss -5.8534 | Critic Loss 0.0992 | 
+Timestep 3400 | Episode 340 | Avg Total Reward 0.5476 | Critic Params Norm 4.3939 | Actor Loss -5.9198 | Critic Loss 0.0788 | 
+Timestep 3425 | Episode 342 | Avg Total Reward 0.5473 | Critic Params Norm 3.0792 | Actor Loss -5.6882 | Critic Loss 0.0596 | 
+Timestep 3450 | Episode 345 | Avg Total Reward 0.5485 | Critic Params Norm 5.7536 | Actor Loss -5.6164 | Critic Loss 0.1331 | 
+Timestep 3475 | Episode 347 | Avg Total Reward 0.5483 | Critic Params Norm 4.4194 | Actor Loss -5.4818 | Critic Loss 0.0640 | 
+Timestep 3500 | Episode 350 | Avg Total Reward 0.5499 | Critic Params Norm 3.2611 | Actor Loss -5.8503 | Critic Loss 0.0648 | 
+Timestep 3525 | Episode 352 | Avg Total Reward 0.5497 | Critic Params Norm 5.6204 | Actor Loss -5.6937 | Critic Loss 0.1073 | 
+Timestep 3550 | Episode 355 | Avg Total Reward 0.5507 | Critic Params Norm 4.4450 | Actor Loss -5.8406 | Critic Loss 0.0615 | 
+Timestep 3575 | Episode 357 | Avg Total Reward 0.5505 | Critic Params Norm 3.9862 | Actor Loss -5.6762 | Critic Loss 0.0630 | 
+Timestep 3600 | Episode 360 | Avg Total Reward 0.5501 | Critic Params Norm 5.4479 | Actor Loss -5.8479 | Critic Loss 0.0714 | 
+Timestep 3625 | Episode 362 | Avg Total Reward 0.5512 | Critic Params Norm 3.9324 | Actor Loss -5.6365 | Critic Loss 0.0511 | 
+Timestep 3650 | Episode 365 | Avg Total Reward 0.5514 | Critic Params Norm 5.8278 | Actor Loss -5.7646 | Critic Loss 0.1269 | 
+Timestep 3675 | Episode 367 | Avg Total Reward 0.5517 | Critic Params Norm 9.6557 | Actor Loss -5.9100 | Critic Loss 0.0786 | 
+Timestep 3700 | Episode 370 | Avg Total Reward 0.5506 | Critic Params Norm 6.6644 | Actor Loss -5.9287 | Critic Loss 0.0920 | 
+Timestep 3725 | Episode 372 | Avg Total Reward 0.5512 | Critic Params Norm 6.4572 | Actor Loss -5.7687 | Critic Loss 0.1206 | 
+Timestep 3750 | Episode 375 | Avg Total Reward 0.5497 | Critic Params Norm 4.1245 | Actor Loss -5.4990 | Critic Loss 0.0775 | 
+Timestep 3775 | Episode 377 | Avg Total Reward 0.5486 | Critic Params Norm 8.6724 | Actor Loss -5.4163 | Critic Loss 0.1265 | 
+Timestep 3800 | Episode 380 | Avg Total Reward 0.5475 | Critic Params Norm 3.4138 | Actor Loss -5.6767 | Critic Loss 0.0740 | 
+Timestep 3825 | Episode 382 | Avg Total Reward 0.5471 | Critic Params Norm 3.3455 | Actor Loss -5.5691 | Critic Loss 0.0693 | 
+Timestep 3850 | Episode 385 | Avg Total Reward 0.5479 | Critic Params Norm 4.0558 | Actor Loss -5.4822 | Critic Loss 0.0770 | 
+Timestep 3875 | Episode 387 | Avg Total Reward 0.5486 | Critic Params Norm 11.4850 | Actor Loss -5.8514 | Critic Loss 0.1188 | 
+Timestep 3900 | Episode 390 | Avg Total Reward 0.5498 | Critic Params Norm 8.8979 | Actor Loss -5.8591 | Critic Loss 0.1516 | 
+Timestep 3925 | Episode 392 | Avg Total Reward 0.5495 | Critic Params Norm 6.1521 | Actor Loss -5.6882 | Critic Loss 0.0799 | 
+Timestep 3950 | Episode 395 | Avg Total Reward 0.5510 | Critic Params Norm 3.8676 | Actor Loss -5.9081 | Critic Loss 0.0718 | 
+Timestep 3975 | Episode 397 | Avg Total Reward 0.5509 | Critic Params Norm 6.5046 | Actor Loss -5.7858 | Critic Loss 0.0813 | 
+Timestep 4000 | Episode 400 | Avg Total Reward 0.5493 | Critic Params Norm 2.9313 | Actor Loss -5.9338 | Critic Loss 0.0672 | 
+Timestep 4025 | Episode 402 | Avg Total Reward 0.5494 | Critic Params Norm 3.0587 | Actor Loss -5.8835 | Critic Loss 0.0482 | 
+Timestep 4050 | Episode 405 | Avg Total Reward 0.5495 | Critic Params Norm 4.2046 | Actor Loss -5.7372 | Critic Loss 0.0779 | 
+Timestep 4075 | Episode 407 | Avg Total Reward 0.5504 | Critic Params Norm 9.3066 | Actor Loss -6.0756 | Critic Loss 0.1041 | 
+Timestep 4100 | Episode 410 | Avg Total Reward 0.5511 | Critic Params Norm 5.5899 | Actor Loss -5.8320 | Critic Loss 0.1200 | 
+Timestep 4125 | Episode 412 | Avg Total Reward 0.5503 | Critic Params Norm 3.9823 | Actor Loss -5.7250 | Critic Loss 0.0499 | 
+Timestep 4150 | Episode 415 | Avg Total Reward 0.5504 | Critic Params Norm 2.7383 | Actor Loss -5.7444 | Critic Loss 0.0737 | 
+Timestep 4175 | Episode 417 | Avg Total Reward 0.5502 | Critic Params Norm 5.9269 | Actor Loss -5.5988 | Critic Loss 0.0549 | 
+Timestep 4200 | Episode 420 | Avg Total Reward 0.5502 | Critic Params Norm 7.7982 | Actor Loss -5.8122 | Critic Loss 0.1122 | 
+Timestep 4225 | Episode 422 | Avg Total Reward 0.5506 | Critic Params Norm 5.5486 | Actor Loss -5.6744 | Critic Loss 0.0566 | 
+Timestep 4250 | Episode 425 | Avg Total Reward 0.5503 | Critic Params Norm 6.4822 | Actor Loss -5.6273 | Critic Loss 0.1163 | 
+Timestep 4275 | Episode 427 | Avg Total Reward 0.5495 | Critic Params Norm 5.1002 | Actor Loss -5.7519 | Critic Loss 0.0706 | 
+Timestep 4300 | Episode 430 | Avg Total Reward 0.5510 | Critic Params Norm 4.1951 | Actor Loss -5.6456 | Critic Loss 0.0834 | 
+Timestep 4325 | Episode 432 | Avg Total Reward 0.5501 | Critic Params Norm 11.8607 | Actor Loss -5.5502 | Critic Loss 0.1384 | 
+Timestep 4350 | Episode 435 | Avg Total Reward 0.5500 | Critic Params Norm 6.7635 | Actor Loss -5.7922 | Critic Loss 0.0775 | 
+Timestep 4375 | Episode 437 | Avg Total Reward 0.5500 | Critic Params Norm 7.1537 | Actor Loss -5.8565 | Critic Loss 0.0910 | 
+Timestep 4400 | Episode 440 | Avg Total Reward 0.5499 | Critic Params Norm 8.5974 | Actor Loss -5.6530 | Critic Loss 0.1659 | 
+Timestep 4425 | Episode 442 | Avg Total Reward 0.5481 | Critic Params Norm 3.0364 | Actor Loss -5.5705 | Critic Loss 0.0501 | 
+Timestep 4450 | Episode 445 | Avg Total Reward 0.5481 | Critic Params Norm 4.6915 | Actor Loss -5.7031 | Critic Loss 0.0775 | 
+Timestep 4475 | Episode 447 | Avg Total Reward 0.5486 | Critic Params Norm 9.4360 | Actor Loss -5.5893 | Critic Loss 0.1389 | 
+Timestep 4500 | Episode 450 | Avg Total Reward 0.5487 | Critic Params Norm 3.7829 | Actor Loss -5.7330 | Critic Loss 0.0789 | 
+Timestep 4525 | Episode 452 | Avg Total Reward 0.5483 | Critic Params Norm 8.8446 | Actor Loss -5.8610 | Critic Loss 0.0712 | 
+Timestep 4550 | Episode 455 | Avg Total Reward 0.5471 | Critic Params Norm 3.0417 | Actor Loss -5.7941 | Critic Loss 0.0445 | 
+Timestep 4575 | Episode 457 | Avg Total Reward 0.5463 | Critic Params Norm 7.5198 | Actor Loss -5.2705 | Critic Loss 0.0808 | 
+Timestep 4600 | Episode 460 | Avg Total Reward 0.5464 | Critic Params Norm 2.5356 | Actor Loss -5.5682 | Critic Loss 0.0695 | 
+Timestep 4625 | Episode 462 | Avg Total Reward 0.5471 | Critic Params Norm 11.3892 | Actor Loss -5.7530 | Critic Loss 0.0699 | 
+Timestep 4650 | Episode 465 | Avg Total Reward 0.5464 | Critic Params Norm 3.5519 | Actor Loss -5.5741 | Critic Loss 0.0648 | 
+Timestep 4675 | Episode 467 | Avg Total Reward 0.5464 | Critic Params Norm 6.3893 | Actor Loss -5.9643 | Critic Loss 0.0959 | 
+Timestep 4700 | Episode 470 | Avg Total Reward 0.5467 | Critic Params Norm 2.8514 | Actor Loss -5.6825 | Critic Loss 0.0546 | 
+Timestep 4725 | Episode 472 | Avg Total Reward 0.5472 | Critic Params Norm 6.2922 | Actor Loss -5.5970 | Critic Loss 0.1365 | 
+Timestep 4750 | Episode 475 | Avg Total Reward 0.5488 | Critic Params Norm 7.1775 | Actor Loss -5.7427 | Critic Loss 0.1141 | 
+Timestep 4775 | Episode 477 | Avg Total Reward 0.5491 | Critic Params Norm 3.5131 | Actor Loss -5.6785 | Critic Loss 0.0758 | 
+Timestep 4800 | Episode 480 | Avg Total Reward 0.5490 | Critic Params Norm 5.2402 | Actor Loss -5.7316 | Critic Loss 0.0709 | 
+Timestep 4825 | Episode 482 | Avg Total Reward 0.5491 | Critic Params Norm 7.9653 | Actor Loss -5.4332 | Critic Loss 0.1110 | 
+Timestep 4850 | Episode 485 | Avg Total Reward 0.5486 | Critic Params Norm 5.7380 | Actor Loss -5.8581 | Critic Loss 0.0752 | 
+Timestep 4875 | Episode 487 | Avg Total Reward 0.5482 | Critic Params Norm 5.7797 | Actor Loss -5.5661 | Critic Loss 0.0677 | 
+Timestep 4900 | Episode 490 | Avg Total Reward 0.5477 | Critic Params Norm 3.4421 | Actor Loss -5.7280 | Critic Loss 0.0692 | 
+Timestep 4925 | Episode 492 | Avg Total Reward 0.5459 | Critic Params Norm 9.2632 | Actor Loss -5.7294 | Critic Loss 0.0743 | 
+Timestep 4950 | Episode 495 | Avg Total Reward 0.5457 | Critic Params Norm 3.9326 | Actor Loss -5.9686 | Critic Loss 0.0744 | 
+Timestep 4975 | Episode 497 | Avg Total Reward 0.5460 | Critic Params Norm 15.4362 | Actor Loss -5.8019 | Critic Loss 0.1213 | 
+Timestep 5000 | Episode 500 | Avg Total Reward 0.5462 | Critic Params Norm 3.9247 | Actor Loss -5.9422 | Critic Loss 0.0769 | 
+Timestep 5025 | Episode 502 | Avg Total Reward 0.5453 | Critic Params Norm 7.2353 | Actor Loss -5.7024 | Critic Loss 0.1156 | 
+Timestep 5050 | Episode 505 | Avg Total Reward 0.5449 | Critic Params Norm 3.1402 | Actor Loss -5.6556 | Critic Loss 0.0515 | 
+Timestep 5075 | Episode 507 | Avg Total Reward 0.5451 | Critic Params Norm 12.5206 | Actor Loss -5.4973 | Critic Loss 0.1497 | 
+Timestep 5100 | Episode 510 | Avg Total Reward 0.5455 | Critic Params Norm 2.9501 | Actor Loss -5.7109 | Critic Loss 0.0645 | 
+Timestep 5125 | Episode 512 | Avg Total Reward 0.5457 | Critic Params Norm 6.0768 | Actor Loss -5.9126 | Critic Loss 0.0656 | 
+Timestep 5150 | Episode 515 | Avg Total Reward 0.5456 | Critic Params Norm 6.5799 | Actor Loss -5.8561 | Critic Loss 0.1022 | 
+Timestep 5175 | Episode 517 | Avg Total Reward 0.5462 | Critic Params Norm 4.3661 | Actor Loss -5.5503 | Critic Loss 0.0748 | 
+Timestep 5200 | Episode 520 | Avg Total Reward 0.5464 | Critic Params Norm 3.7028 | Actor Loss -5.8192 | Critic Loss 0.0612 | 
+Timestep 5225 | Episode 522 | Avg Total Reward 0.5469 | Critic Params Norm 3.9840 | Actor Loss -5.6110 | Critic Loss 0.0680 | 
+Timestep 5250 | Episode 525 | Avg Total Reward 0.5461 | Critic Params Norm 5.2645 | Actor Loss -5.8436 | Critic Loss 0.1215 | 
+Timestep 5275 | Episode 527 | Avg Total Reward 0.5448 | Critic Params Norm 4.4414 | Actor Loss -5.8127 | Critic Loss 0.0652 | 
+Timestep 5300 | Episode 530 | Avg Total Reward 0.5450 | Critic Params Norm 11.7714 | Actor Loss -5.6849 | Critic Loss 0.2044 | 
+Timestep 5325 | Episode 532 | Avg Total Reward 0.5451 | Critic Params Norm 5.0862 | Actor Loss -5.6720 | Critic Loss 0.0791 | 
+Timestep 5350 | Episode 535 | Avg Total Reward 0.5451 | Critic Params Norm 6.9095 | Actor Loss -5.7278 | Critic Loss 0.1535 | 
+Timestep 5375 | Episode 537 | Avg Total Reward 0.5453 | Critic Params Norm 3.1574 | Actor Loss -5.7466 | Critic Loss 0.0409 | 
+Timestep 5400 | Episode 540 | Avg Total Reward 0.5449 | Critic Params Norm 6.7637 | Actor Loss -5.7721 | Critic Loss 0.1061 | 
+Timestep 5425 | Episode 542 | Avg Total Reward 0.5449 | Critic Params Norm 8.2459 | Actor Loss -5.9144 | Critic Loss 0.1170 | 
+Timestep 5450 | Episode 545 | Avg Total Reward 0.5448 | Critic Params Norm 3.3353 | Actor Loss -5.6124 | Critic Loss 0.0523 | 
+Timestep 5475 | Episode 547 | Avg Total Reward 0.5435 | Critic Params Norm 7.3519 | Actor Loss -5.5243 | Critic Loss 0.1253 | 
+Timestep 5500 | Episode 550 | Avg Total Reward 0.5436 | Critic Params Norm 4.0221 | Actor Loss -5.6529 | Critic Loss 0.1146 | 
+Timestep 5525 | Episode 552 | Avg Total Reward 0.5439 | Critic Params Norm 7.6287 | Actor Loss -5.6765 | Critic Loss 0.0619 | 
+Timestep 5550 | Episode 555 | Avg Total Reward 0.5446 | Critic Params Norm 9.9378 | Actor Loss -5.7868 | Critic Loss 0.1206 | 
+Timestep 5575 | Episode 557 | Avg Total Reward 0.5453 | Critic Params Norm 6.3665 | Actor Loss -5.7600 | Critic Loss 0.0563 | 
+Timestep 5600 | Episode 560 | Avg Total Reward 0.5453 | Critic Params Norm 4.3026 | Actor Loss -5.6775 | Critic Loss 0.0822 | 
+Timestep 5625 | Episode 562 | Avg Total Reward 0.5454 | Critic Params Norm 6.0129 | Actor Loss -5.5547 | Critic Loss 0.0819 | 
+Timestep 5650 | Episode 565 | Avg Total Reward 0.5454 | Critic Params Norm 10.7406 | Actor Loss -5.6914 | Critic Loss 0.1257 | 
+Timestep 5675 | Episode 567 | Avg Total Reward 0.5456 | Critic Params Norm 5.7871 | Actor Loss -5.7260 | Critic Loss 0.0906 | 
+Timestep 5700 | Episode 570 | Avg Total Reward 0.5450 | Critic Params Norm 3.8916 | Actor Loss -5.7738 | Critic Loss 0.0604 | 
+Timestep 5725 | Episode 572 | Avg Total Reward 0.5444 | Critic Params Norm 11.0816 | Actor Loss -5.8501 | Critic Loss 0.0743 | 
+Timestep 5750 | Episode 575 | Avg Total Reward 0.5448 | Critic Params Norm 10.9065 | Actor Loss -5.5478 | Critic Loss 0.1509 | 
+Timestep 5775 | Episode 577 | Avg Total Reward 0.5454 | Critic Params Norm 6.6654 | Actor Loss -5.6050 | Critic Loss 0.1145 | 
+Timestep 5800 | Episode 580 | Avg Total Reward 0.5443 | Critic Params Norm 5.2255 | Actor Loss -5.8856 | Critic Loss 0.0716 | 
+Timestep 5825 | Episode 582 | Avg Total Reward 0.5438 | Critic Params Norm 7.2239 | Actor Loss -5.6609 | Critic Loss 0.1200 | 
+Timestep 5850 | Episode 585 | Avg Total Reward 0.5444 | Critic Params Norm 3.4546 | Actor Loss -5.7893 | Critic Loss 0.0592 | 
+Timestep 5875 | Episode 587 | Avg Total Reward 0.5442 | Critic Params Norm 6.9697 | Actor Loss -5.8240 | Critic Loss 0.0916 | 
+Timestep 5900 | Episode 590 | Avg Total Reward 0.5448 | Critic Params Norm 4.3135 | Actor Loss -5.9159 | Critic Loss 0.0935 | 
+Timestep 5925 | Episode 592 | Avg Total Reward 0.5449 | Critic Params Norm 3.7608 | Actor Loss -5.7452 | Critic Loss 0.0450 | 
+Timestep 5950 | Episode 595 | Avg Total Reward 0.5448 | Critic Params Norm 4.8559 | Actor Loss -5.7406 | Critic Loss 0.0927 | 
+Timestep 5975 | Episode 597 | Avg Total Reward 0.5443 | Critic Params Norm 3.0921 | Actor Loss -5.7185 | Critic Loss 0.0649 | 
+Timestep 6000 | Episode 600 | Avg Total Reward 0.5447 | Critic Params Norm 5.8055 | Actor Loss -5.7483 | Critic Loss 0.1007 | 
+Process Finished
+Data saved

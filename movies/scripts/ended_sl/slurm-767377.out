@@ -1,0 +1,52 @@
+------------------------ Train PMF ---------------------------
+Loaded user
+Loaded prod
+Loaded data
+Model moved to CUDA
+------------------------------------------- Training Model------------------------------------------------
+parameters are: train ratio:0.800000,batch_size:100000, epoches:50, weight_decay:0.100000
+PMF(
+  (user_embeddings): Embedding(103839, 100)
+  (item_embeddings): Embedding(9976, 100)
+  (ub): Embedding(103839, 1)
+  (ib): Embedding(9976, 1)
+)
+/orfeo/cephfs/home/dssc/eruoppolo/reinforcement/rl/movies/scripts/../embedding.py:170: DeprecationWarning: __array_wrap__ must accept context and return_scalar arguments (positionally) in the future. (Deprecated NumPy 2.0)
+  train_rmse = np.sqrt(train_epoch_loss.cpu())
+Training epoch: 1, training rmse: 1.067707, vali rmse:1.007883
+Training epoch: 2, training rmse: 0.964044, vali rmse:0.948257
+Training epoch: 3, training rmse: 0.910480, vali rmse:0.908702
+Training epoch: 4, training rmse: 0.864257, vali rmse:0.864818
+Training epoch: 5, training rmse: 0.814832, vali rmse:0.814877
+Training epoch: 6, training rmse: 0.756009, vali rmse:0.751525
+Training epoch: 7, training rmse: 0.684554, vali rmse:0.680674
+Training epoch: 8, training rmse: 0.614433, vali rmse:0.612507
+Training epoch: 9, training rmse: 0.553186, vali rmse:0.557995
+Training epoch: 10, training rmse: 0.508026, vali rmse:0.519814
+Training epoch: 11, training rmse: 0.477233, vali rmse:0.492473
+Training epoch: 12, training rmse: 0.455418, vali rmse:0.472438
+Training epoch: 13, training rmse: 0.440103, vali rmse:0.458253
+Training epoch: 14, training rmse: 0.429183, vali rmse:0.447738
+Training epoch: 15, training rmse: 0.420931, vali rmse:0.439621
+Training epoch: 16, training rmse: 0.414356, vali rmse:0.433128
+Training epoch: 17, training rmse: 0.408815, vali rmse:0.427723
+Training epoch: 18, training rmse: 0.403842, vali rmse:0.423007
+Training epoch: 19, training rmse: 0.399104, vali rmse:0.418709
+Training epoch: 20, training rmse: 0.394394, vali rmse:0.414686
+Training epoch: 21, training rmse: 0.389619, vali rmse:0.410893
+Training epoch: 22, training rmse: 0.384767, vali rmse:0.407347
+Training epoch: 23, training rmse: 0.379869, vali rmse:0.404080
+Training epoch: 24, training rmse: 0.374968, vali rmse:0.401126
+Training epoch: 25, training rmse: 0.370096, vali rmse:0.398499
+Training epoch: 26, training rmse: 0.365257, vali rmse:0.396196
+Training epoch: 27, training rmse: 0.360434, vali rmse:0.394205
+Training epoch: 28, training rmse: 0.355610, vali rmse:0.392513
+Training epoch: 29, training rmse: 0.350778, vali rmse:0.391110
+Training epoch: 30, training rmse: 0.345951, vali rmse:0.389986
+Training epoch: 31, training rmse: 0.341163, vali rmse:0.389132
+Training epoch: 32, training rmse: 0.336460, vali rmse:0.388535
+Training epoch: 33, training rmse: 0.331899, vali rmse:0.388172
+Training epoch: 34, training rmse: 0.327542, vali rmse:0.388014
+Training epoch: 35, training rmse: 0.323447, vali rmse:0.388022
+------------------------------------------- Testing Model------------------------------------------------
+Test rmse: 0.388330

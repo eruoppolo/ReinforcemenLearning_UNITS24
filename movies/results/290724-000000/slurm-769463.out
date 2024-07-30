@@ -1,0 +1,33 @@
+/orfeo/cephfs/home/dssc/eruoppolo/reinforcement/rl/final/results/290724-000000/createimage_tsne.py:32: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig = plt.figure(figsize=(12, 10))
+----------- USER 0 TERMINATO, RESTANTI 30
+----------- USER 272 TERMINATO, RESTANTI 29
+----------- USER 539 TERMINATO, RESTANTI 28
+----------- USER 260 TERMINATO, RESTANTI 27
+----------- USER 506 TERMINATO, RESTANTI 26
+----------- USER 314 TERMINATO, RESTANTI 25
+----------- USER 400 TERMINATO, RESTANTI 24
+----------- USER 214 TERMINATO, RESTANTI 23
+----------- USER 200 TERMINATO, RESTANTI 22
+----------- USER 27 TERMINATO, RESTANTI 21
+----------- USER 215 TERMINATO, RESTANTI 20
+----------- USER 363 TERMINATO, RESTANTI 19
+----------- USER 438 TERMINATO, RESTANTI 18
+----------- USER 8 TERMINATO, RESTANTI 17
+----------- USER 558 TERMINATO, RESTANTI 16
+----------- USER 554 TERMINATO, RESTANTI 15
+----------- USER 224 TERMINATO, RESTANTI 14
+----------- USER 146 TERMINATO, RESTANTI 13
+----------- USER 153 TERMINATO, RESTANTI 12
+----------- USER 219 TERMINATO, RESTANTI 11
+----------- USER 142 TERMINATO, RESTANTI 10
+----------- USER 208 TERMINATO, RESTANTI 9
+----------- USER 585 TERMINATO, RESTANTI 8
+----------- USER 140 TERMINATO, RESTANTI 7
+----------- USER 381 TERMINATO, RESTANTI 6
+----------- USER 418 TERMINATO, RESTANTI 5
+----------- USER 182 TERMINATO, RESTANTI 4
+----------- USER 63 TERMINATO, RESTANTI 3
+----------- USER 521 TERMINATO, RESTANTI 2
+----------- USER 479 TERMINATO, RESTANTI 1
+----------- USER 452 TERMINATO, RESTANTI 0

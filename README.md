@@ -1,5 +1,5 @@
 # Reinforcement Learning_UNITS24
-ReinfrocementLearning project @ UNITS
+Reinfrocement Learning project @ UNITS, Summer 2024
 
 Annalisa Paladino, Luca Pernice, Emanuele Ruoppolo
 

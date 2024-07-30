@@ -7,6 +7,13 @@ This project is inspired by [Deep Reinforcement Learning based Recommendation wi
 
 To test the code first of all get the ```ratings.csv``` file from [MovieLens Data](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset) and run:
 
-``
+```
 preprocessing.py
-``
+
+```
+
+This will generate three files to use for training the PMF in order to get the data embeddings by running:
+```
+embedding.py
+
+```

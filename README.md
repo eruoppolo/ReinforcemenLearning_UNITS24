@@ -18,7 +18,7 @@ embedding.py
 
 ```
 
-After finishing the traing the PMF model is ready to be used for training and evaluatin the Actor-Critic networks, by running:
+After finishing the training the PMF model is ready to be used for training and evaluating the Actor-Critic networks, by running:
 
 ```
 drr.py

@@ -17,7 +17,6 @@ This will generate three files to use for training the PMF in order to get the d
 embedding.py
 
 ```
-![image](movies/pmf_training_ratio_0.800000_bs_100000_e_35_wd_0.100000_lr_0.000500.png)
 
 After finishing the traing the PMF model is ready to be used for training and evaluatin the Actor-Critic networks, by running:
 
